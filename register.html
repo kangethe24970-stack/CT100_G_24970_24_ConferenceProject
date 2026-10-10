@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - STIC 2026</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+<h2>STIC 2026</h2>
+<nav><a href="index.html">Home</a><a href="register.html">Register</a></nav>
+</header>
+
+<div class="form-container">
+<h2>Conference Registration Form</h2>
+
+<form action="process.php" method="POST" onsubmit="return validateForm()">
+
+<label>Full Name *</label>
+<input type="text" id="fullname" name="fullname">
+<span class="error" id="errName">Full name cannot be empty</span>
+
+<label>Admission Number *</label>
+<input type="text" id="regno" name="regno" placeholder="B/T/1234/2026">
+
+<label>Email Address *</label>
+<input type="text" id="email" name="email">
+<span class="error" id="errEmail">Email must contain valid email</span>
+
+<label>Phone Number *</label>
+<input type="text" id="phone" name="phone">
+<span class="error" id="errPhone">Phone must contain exactly 10 digits</span>
+
+<label>Year of Study *</label>
+<select id="year" name="year">
+<option value="">Select Year</option>
+<option value="1">Year 1</option>
+<option value="2">Year 2</option>
+<option value="3">Year 3</option>
+<option value="4">Year 4</option>
+</select>
+
+<label>Participation Category *</label>
+<select id="category" name="category" onchange="showWorkshop()">
+<option value="">Select Category</option>
+<option value="conference">Conference Only</option>
+<option value="workshop">Workshop Participant</option>
+</select>
+<span class="error" id="errCategory">Select participation category</span>
+
+<label>Conference Days (1-3) *</label>
+<input type="number" id="days" name="days" value="1" min="1" max="3" oninput="calculateFee()">
+<span class="error" id="errDays">Days must be between 1 and 3</span>
+
+<div id="workshopDiv" style="display:none;">
+<label>Workshop Selection</label>
+<select id="workshop" name="workshop" onchange="calculateFee()">
+<option value="none">Select Workshop</option>
+<option value="Web Development">Web Development</option>
+<option value="AI and Machine Learning">AI and Machine Learning</option>
+<option value="Mobile App Development">Mobile App Development</option>
+<option value="Cyber Security">Cyber Security</option>
+</select>
+</div>
+
+<label>Meal Option</label>
+<select id="mealOption" name="mealOption" onchange="calculateFee()">
+<option value="no">No Meals</option>
+<option value="yes">Yes - Lunch KSh 300 per day</option>
+</select>
+
+<div class="fee-box">
+<h3>Fee Breakdown</h3>
+<p>Registration: <span id="displayReg">KSh 1000</span></p>
+<p>Attendance: <span id="displayAttend">KSh 500</span></p>
+<p>Workshop: <span id="displayWorkshop">KSh 0</span></p>
+<p>Meals: <span id="displayMeal">KSh 0</span></p>
+<p>Discount: <span id="displayDiscount">KSh 0</span></p>
+<hr>
+<h3>Total: <span id="totalFee">KSh 1500</span></h3>
+</div>
+
+<button type="submit">Submit Registration</button>
+
+</form>
+</div>
+
+<footer>© 2026 STIC Conference</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

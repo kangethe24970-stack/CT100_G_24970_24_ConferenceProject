@@ -1,0 +1,105 @@
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:white;
+color:black;
+}
+header{
+background:black;
+color:white;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:4px solid #0d47a1;
+}
+header a{
+color:white;
+text-decoration:none;
+margin-left:15px;
+}
+.hero{
+background:black;
+color:white;
+text-align:center;
+padding:40px 20px;
+border-bottom:5px solid #0d47a1;
+}
+.hero h1{color:#64b5f6;}
+.content, .form-container{
+max-width:700px;
+margin:20px auto;
+padding:20px;
+}
+.form-container{
+border:1px solid #ccc;
+border-radius:8px;
+}
+label{
+display:block;
+margin-top:12px;
+font-weight:bold;
+}
+input, select{
+width:100%;
+padding:8px;
+margin-top:5px;
+box-sizing:border-box;
+}
+.error{
+color:red;
+font-size:13px;
+display:none;
+}
+.fee-box{
+background:black;
+color:white;
+padding:15px;
+border-radius:8px;
+margin-top:20px;
+border-left:5px solid #0d47a1;
+}
+.fee-box h3{color:#64b5f6;}
+.total{
+background:black;
+color:white;
+padding:10px;
+font-weight:bold;
+border-left:5px solid #0d47a1;
+margin-top:15px;
+}
+.success{
+color:#0d47a1;
+font-weight:bold;
+font-size:18px;
+}
+.thanks{
+background:#e3f2fd;
+padding:10px;
+border-left:4px solid #0d47a1;
+margin-top:15px;
+}
+button, .btn, .btn-blue{
+background:black;
+color:white;
+padding:12px;
+border:none;
+width:100%;
+margin-top:15px;
+cursor:pointer;
+font-weight:bold;
+border-radius:5px;
+text-decoration:none;
+display:inline-block;
+text-align:center;
+box-sizing:border-box;
+}
+.btn-blue{background:#0d47a1; width:auto; padding:10px 20px;}
+button:hover, .btn:hover{background:#0d47a1;}
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:10px;
+margin-top:20px;
+}
